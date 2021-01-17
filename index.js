@@ -1,8 +1,7 @@
 const API_URL =
-  "https://api.github.com/repos/sahsdfanr/street-fighter/contents/fighters.json";
-
+  "https://api.github.com/repos/sahanr/street-fighter/contents/fighters.json";
 const rootElement = document.getElementById("root");
-rootElement.innerText = "Loading...";
+const loadingElement = document.getElementById("loading-overlay");
 
 fetch(API_URL)
   .then((response) => {
@@ -15,8 +14,10 @@ fetch(API_URL)
     const fighters = JSON.parse(atob(file.content));
     const names = fighters.map((it) => it.name).join("\n");
     rootElement.innerText = names;
+    loadingElement.remove();
   })
   .catch((error) => {
     console.warn(error);
     root.innerText = "Failed to load data";
+    loadingElement.remove();
   });
