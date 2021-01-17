@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/gonzoibox/street-fight-game/issues"
   },
-  "homepage": "https://github.com/gonzoibox/street-fight-game#readme"
+  "homepage": "https://github.com/gonzoibox/street-fight-game#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10"
+  }
 }
