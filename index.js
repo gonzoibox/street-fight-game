@@ -9,6 +9,8 @@ function callApi(endpoind, method) {
     method,
   };
 
+  const name = "";
+
   return fetch(url, options)
     .then((response) =>
       response.ok ? response.json() : Promise.reject(Error("Failed to load"))
