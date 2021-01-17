@@ -3,9 +3,19 @@ const rootElement = document.getElementById("root");
 const loadingElement = document.getElementById("loading-overlay");
 
 async function startApp() {
-  const endpoint = "repos/sahanr/street-fighter/contents/fighters.json";
-  const fighters = await callApi(endpoint, "GET");
-  rootElement.innerText = getFightersNames(fighters);
+  try {
+    loadingElement.style.visibility = "visible";
+
+    const endpoint = "repos/sahanr/street-fighter/contents/fighters.json";
+    const fighters = await callApi(endpoint, "GET");
+
+    rootElement.innerText = getFightersNames(fighters);
+  } catch (error) {
+    console.warn(error);
+    rootElement.innerText = "Failed to load data";
+  } finally {
+    loadingElement.style.visibility = "hidden";
+  }
 }
 
 function callApi(endpoind, method) {
@@ -20,11 +30,7 @@ function callApi(endpoind, method) {
     )
     .then((file) => JSON.parse(atob(file.content)))
     .catch((error) => {
-      console.warn(error);
-      rootElement.innerText = "Failed to load data";
-    })
-    .finally(() => {
-      loadingElement.remove();
+      throw error;
     });
 }
 
