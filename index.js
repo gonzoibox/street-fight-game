@@ -7,7 +7,7 @@ rootElement.innerText = "Loading...";
 fetch(API_URL)
   .then((response) => {
     if (!response.ok) {
-      throw new Error("Failed load data");
+      return Promise.reject(new Error("Failed load data"));
     }
     return response.json();
   })
