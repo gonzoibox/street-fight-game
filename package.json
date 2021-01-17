@@ -1,0 +1,19 @@
+{
+  "name": "street-fight-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonzoibox/street-fight-game.git"
+  },
+  "author": "Anton Davydovych",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gonzoibox/street-fight-game/issues"
+  },
+  "homepage": "https://github.com/gonzoibox/street-fight-game#readme"
+}
