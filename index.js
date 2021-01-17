@@ -1,12 +1,15 @@
 const API_URL =
-  "https://api.git--hub.com/repos/sahanr/street-fighter/contents/fighters.json";
+  "https://api.github.com/repos/sahsdfanr/street-fighter/contents/fighters.json";
 
 const rootElement = document.getElementById("root");
 rootElement.innerText = "Loading...";
 
 fetch(API_URL)
   .then((response) => {
-    response.json();
+    if (!response.ok) {
+      throw new Error("Failed load data");
+    }
+    return response.json();
   })
   .then((file) => {
     const fighters = JSON.parse(atob(file.content));
