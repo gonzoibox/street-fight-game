@@ -12,3 +12,5 @@ class View {
     return element;
   }
 }
+
+export default View;

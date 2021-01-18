@@ -1,3 +1,6 @@
+import FightersView from "./fightersView";
+import { fighterService } from "./services/fightersService";
+
 class App {
   constructor() {
     this.startApp();
@@ -23,3 +26,5 @@ class App {
     }
   }
 }
+
+export default App;

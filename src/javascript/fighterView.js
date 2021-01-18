@@ -1,3 +1,5 @@
+import View from "./view";
+
 class FighterView extends View {
   constructor(fighter, handleClick) {
     super();
@@ -40,3 +42,5 @@ class FighterView extends View {
     return imgElement;
   }
 }
+
+export default FighterView;

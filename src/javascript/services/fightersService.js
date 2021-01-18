@@ -1,3 +1,5 @@
+import { callApi } from "../helpers/apiHelper";
+
 class FighterService {
   async getFighters() {
     try {
@@ -9,11 +11,11 @@ class FighterService {
       throw error;
     }
   }
-  
+
   async getFightersDetails() {
-	// implement this method
-	// endpoint - 'repos/sahanr/street-fighter/contents/fighters.json'
+    // implement this method
+    // endpoint - 'repos/sahanr/street-fighter/contents/fighters.json'
   }
 }
 
-const fighterService = new FighterService();
+export const fighterService = new FighterService();

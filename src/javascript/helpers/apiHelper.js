@@ -16,3 +16,5 @@ function callApi(endpoind, method) {
       throw error;
     });
 }
+
+export { callApi };

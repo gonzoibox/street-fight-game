@@ -1,3 +1,6 @@
+import View from "./view";
+import FighterView from "./fighterView";
+
 class FightersView extends View {
   constructor(fighters) {
     super();
@@ -29,3 +32,5 @@ class FightersView extends View {
     // allow to edit health and power in this modal
   }
 }
+
+export default FightersView;

@@ -1,2 +1,3 @@
-new App();
+import App from "./src/javascript/app";
 
+new App();
