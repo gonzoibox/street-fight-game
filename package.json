@@ -1,0 +1,32 @@
+{
+  "name": "street-fight-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonzoibox/street-fight-game.git"
+  },
+  "author": "Anton Davydovych",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gonzoibox/street-fight-game/issues"
+  },
+  "homepage": "https://github.com/gonzoibox/street-fight-game#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.15.0",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
