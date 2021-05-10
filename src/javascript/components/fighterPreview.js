@@ -8,8 +8,18 @@ export function createFighterPreview(fighter, position) {
   });
 
   // todo: show fighter info (image, name, health, etc.)
-
-  return fighterElement;
+  if(!!fighter) {
+    const {attack, defense, health, name} = fighter;
+    const nameElement = createElement({tagName: 'span'});
+    nameElement.innerHTML = name;
+    fighterElement.append(nameElement);
+    return fighterElement;
+  } else {
+    const nameElement = createElement({tagName: 'span'});
+    nameElement.innerHTML = 'Name';
+    fighterElement.append(nameElement);
+    return fighterElement;
+  }
 }
 
 export function createFighterImage(fighter) {
